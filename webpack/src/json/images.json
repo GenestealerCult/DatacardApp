@@ -1,0 +1,245 @@
+{
+  "intercessor": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/8p670ru80GsA4RIf-490x550.png"
+  },
+  "assaultintercessor": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/PoCyaEf1N2vhL8kN-490x550.png"
+  },
+  "infiltrator": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/EyHjJkKNN79kg54e-490x550.png"
+  },
+  "incursor": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/amM3wdrtQ3SkalPo-490x550.png"
+  },
+  "reiver": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/G9ZIv3nraSllHdta-490x550.png"
+  },
+  "heavyintercessor": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/fBgiV44tFYMo82Bv-490x550.png"
+  },
+  "tacticalmarine": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/JQGMNZ55h7YLp6Bd-490x550.png"
+  },
+  "scout": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/cDMhwIFJRSDMzMeJ-490x550.png"
+  },
+  "scoutsniper": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/6UglzIPmsu7gqR5K-490x550.png"
+  },
+  "deathwatchveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/Yw59WcwjbEkTsFy2-490x550.png"
+  },
+  "greyknight": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/83vJVBGCwjHUWJZf-490x550.png"
+  },
+  "justicar": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/5JiaBSbT3v8O6eU9-490x550.png"
+  },
+  "guardsman": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/VNTJ5O01VfNGCvVO-490x550.png"
+  },
+  "tempestusscion": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/JMqOiPxFoWGCGVHD-490x550.png"
+  },
+  "skitariiranger": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/xonBdvh9ysXcUdIC-490x550.png"
+  },
+  "skitariivanguard": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/VuzVRlP0WbJro7Up-490x550.png"
+  },
+  "sicarianruststalker": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/wWfESRtIDxlOSOYf-490x550.png"
+  },
+  "sicarianinfiltrator": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/BzmE3QdNNklQ5Y9U-490x550.png"
+  },
+  "battlesister": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/6eIWRD7lqSFuUcCq-490x550.png"
+  },
+  "sisterrepentia": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/QKyX6OFkjD9PbKt5-490x550.png"
+  },
+  "arcoflaggelant": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/qDVuyBZxLkZa4pZo-490x550.png"
+  },
+  "custodianguard": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/fyP9uLlqux0Sl0fj-490x550.png"
+  },
+  "sisterofsilence": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/UkIva3ub3BNiqrE2-490x550.png"
+  },
+  "rubricmarine": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/tmpitXIxveBwVVGs-490x550.png"
+  },
+  "tzaangor": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/6a2cYFCNgHrrSKQQ-490x550.png"
+  },
+  "kommandonob": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/fl500NxtQOUpLGAH-490x550.png"
+  },
+  "kommandodakkaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/3yIYkDb7KGEshDeH-490x550.png"
+  },
+  "kommandobreachaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/5AbI4g9mlW5vH5Yc-490x550.png"
+  },
+  "kommandoburnaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/3bJbU4IfBcPqO2dJ-490x550.png"
+  },
+  "kommandocommsboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/HdJDCIp6uQbPj84f-490x550.png"
+  },
+  "kommandorokkitboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/1YLobYKDUBKwHj2d-490x550.png"
+  },
+  "kommandoslashaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/aSUykn7dqAgGzK24-490x550.png"
+  },
+  "kommandosnipaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/naioxY7aaBVNI9S6-490x550.png"
+  },
+  "kommandogrot": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/hi6HKmmaQMSG1VOP-490x550.png"
+  },
+  "plaguemarine": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/g1ieOJmY93Id3kfz-490x550.png"
+  },
+  "poxwalker": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/1XLehHjjlWrZGeUn-490x550.png"
+  },
+  "chaosspacemarine": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/ImahuMWk0sx3sQ8G-490x550.png"
+  },
+  "chaoscultist": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/3d7oJ9bgQPFUELSM-490x550.png"
+  },
+  "plaguebearer": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/J6tHjQuyhTDpTlgt-490x550.png"
+  },
+  "bloodletter": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/uFUU7jkOYpliimv6-490x550.png"
+  },
+  "daemonette": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/YX2cRmK8KMmtHYPm-490x550.png"
+  },
+  "horror": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/yw0fEXvD5qWRlbOK-490x550.png"
+  },
+  "guardiandefender": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/nz9kGDfnF82o0tX5-490x550.png"
+  },
+  "stormguardian": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/kWwwC9eeD6JYDHCo-490x550.png"
+  },
+  "ranger": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/uElKK4h7mYs5GFo4-490x550.png"
+  },
+  "direavenger": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/cFq0yMFY5D5omEGl-490x550.png"
+  },
+  "sergeantveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/S3H69t9PbSfJpD66-490x550.png"
+  },
+  "hardenedveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/zpHbVpEC5k1fx3Fc-490x550.png"
+  },
+  "bruiserveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/les0ooAS0gJiZLZI-490x550.png"
+  },
+  "commsveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/2zYCKHqCyUmz8KtK-490x550.png"
+  },
+  "zealotveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/PjQMspmg2xXhkJCf-490x550.png"
+  },
+  "trooperveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/tpzPOisqlcl0MxMn-490x550.png"
+  },
+  "demolitionveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/0qMeSeEkuBIIJCqp-490x550.png"
+  },
+  "medicveteran": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/4sLRJOlBMOLrwBMz-490x550.png"
+  },
+  "player": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/Ytc3VO07jJLPMrY0-490x550.png"
+  },
+  "kabalite": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/84DW5uuhLqGD8EDr-490x550.png"
+  },
+  "wych": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/saBGpqoSUIY9o2to-490x550.png"
+  },
+  "boy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/fQpdasxhBqdIAf8x-490x550.png"
+  },
+  "gretchin": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/OmiomUSJc5gL8fzS-490x550.png"
+  },
+  "clankommando": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/dz4hCATwC94Z6OKA-490x550.png"
+  },
+  "burnaboy": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/aqewHBpP0szZyTRd-490x550.png"
+  },
+  "loota": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/Dq9qkQzxabeXo5hv-490x550.png"
+  },
+  "spanner": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/bKiqauKsLEhpQowC-490x550.png"
+  },
+  "drone": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/rBfvAlNGn9pJIcHH-490x550.png"
+  },
+  "firewarrior": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/eoxAH293rzyfpTXS-490x550.png"
+  },
+  "pathfinder": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/f01PjODN4sX37ZzM-490x550.png"
+  },
+  "stealthbattlesuit": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/tXxl0AfSa99xiyky-490x550.png"
+  },
+  "necronwarrior": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/KlAXYG8XyOBeQubs-490x550.png"
+  },
+  "immortal": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/PW6ecGCY46ZcoSiG-490x550.png"
+  },
+  "flayedone": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/6XRv4DfSKFdsaYv6-490x550.png"
+  },
+  "deathmark": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/UlQxOLebebV4lPCX-490x550.png"
+  },
+  "genestealer": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/hgKsivnHihg3IhE3-490x550.png"
+  },
+  "tyranidwarrior": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/UCFkWmWHCI6DTFDh-490x550.png"
+  },
+  "termagant": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/O8eQXZbSXACjS0XN-490x550.png"
+  },
+  "hormagaunt": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/mATvDkYZL2LCjo7W-490x550.png"
+  },
+  "krootcarnivore": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/fqgdpJ3FTxazDsWa-490x550.png"
+  },
+  "kroothound": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/XjSMwDCSoBrFACVA-490x550.png"
+  },
+  "krootox": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/feAPHhdxOtD60Kmk-490x550.png"
+  },
+  "acolytehybrid": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/CnI2J0qcsmI4s5rl-490x550.png"
+  },
+  "neophytehybrid": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/x1c8PPtDTz9ptqtb-490x550.png"
+  },
+  "hybridmetamorph": {
+    "src": "https://warhammer40000.com/wp-content/uploads/2021/07/4L7QhWcIdh5eabtc-490x550.png"
+  }
+}

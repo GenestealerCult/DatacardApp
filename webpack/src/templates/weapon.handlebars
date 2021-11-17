@@ -1,0 +1,8 @@
+                  <tr {{#if equipment }}class="equipment-{{ id }}"{{/if}}>
+                    <td class="font-body" contenteditable="true">{{ title }}{{#if (and operator cost)}}{{ cost }}{{/if}}</td>
+                    <td contenteditable="true">{{ stats_a }}</td>
+                    <td contenteditable="true">{{ stats_wsbs }}</td>
+                    <td contenteditable="true">{{ stats_d }}</td>
+                    <td contenteditable="true" class="weapon-text">{{ stats_sr }}</td>
+                    <td contenteditable="true" class="weapon-text">{{ stats_critical }}</td>
+                  </tr>

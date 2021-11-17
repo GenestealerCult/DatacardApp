@@ -1,0 +1,269 @@
+<table class="avoid-break card-{{ size }} {{#if operator}}operator-card{{ else }}rule-card{{/if}}">
+  <tr>
+    <td>
+      <div class="datacard" id="datacard-{{ id }}">
+        <div class="datacard-container">
+          {{#if operator}}
+          <div class="header-container">
+            <div class="header-left">
+              <h2 class="card-title uppercase heading font-heading" contenteditable="true">{{ title }}</h2>
+              <p class="text-14 italic bold description" contenteditable="true">{{ description }}</p>
+
+              <div class="wounds">
+                <span class="text-20 uppercase heading font-heading wound-title">Wounds</span>
+                <div class="wound-tracker">{{#wounds }}<div class="{{#isInjured ../wounds.length @index}}{{/isInjured}}"></div>{{/wounds }}</div>
+              </div>
+            </div>
+
+            <div class="header-right-container uppercase" style="white-space: nowrap">
+              <div class="header-right-row bg-orange">
+                <div class="header-right-row-content font-heading">
+                  <div class="header-right-row-label">M</div><!--
+                  --><div class="header-right-row-label">APL</div><!--
+                  --><div class="header-right-row-label">GA</div><!--
+                  --><div class="header-right-row-label small-only">DF</div><!--
+                  --><div class="header-right-row-label small-only">SV</div><!--
+                  --><div class="header-right-row-label small-only">W</div>
+                </div>
+              </div>
+
+              <div class="header-right-row">
+                <div class="header-right-row-content font-value">
+                  <div class="header-right-row-value"></div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_m }}</div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_apl }}</div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_ga }}</div><!--
+                  --><div class="header-right-row-value small-only" contenteditable="true">{{ stats_df }}</div><!--
+                  --><div class="header-right-row-value small-only" contenteditable="true">{{ stats_sv }}</div><!--
+                  --><div class="header-right-row-value small-only" contenteditable="true">{{ stats_w }}</div>
+                </div>
+              </div>
+
+              <div class="header-right-row bg-orange large-only">
+                <div class="header-right-row-content font-heading">
+                  <div class="header-right-row-label">DF</div><!--
+                  --><div class="header-right-row-label">SV</div><!--
+                  --><div class="header-right-row-label">W</div>
+                </div>
+              </div>
+
+              <div class="header-right-row large-only">
+                <div class="header-right-row-content font-value">
+                  <div class="header-right-row-value"></div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_df }}</div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_sv }}</div><!--
+                  --><div class="header-right-row-value" contenteditable="true">{{ stats_w }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="triangle-container">
+            <div class="triangle-inner">
+              <div
+                class="triangle-photo"
+                id="photo-{{ id }}-triangle"
+                style="background-image: url('{{ photo }}');"
+              ></div>
+            </div>
+          </div>
+          {{else}}
+          <div class="header-container">
+            <div class="header-left">
+              <h2 class="card-title uppercase heading font-heading" contenteditable="true">{{ title }}</h2>
+              <p class="text-14 italic bold description" contenteditable="true">{{ description }}</p>
+            </div>
+          </div>
+          {{/if}}
+
+          <div class="datacard-content">
+            {{#if (or weapons.length operator)}}
+            <table class="table table-tiny">
+              <thead class="datacard-table-header uppercase font-heading">
+                <tr>
+                  <th scope="col">Weapon</th>
+                  <th scope="col">A</th>
+                  <th scope="col">BS/WS</th>
+                  <th scope="col">D</th>
+                  <th scope="col">SR</th>
+                  <th scope="col">!</th>
+                </tr>
+              </thead>
+              <tbody class="datacard-table-body font-value">
+                {{#weapons }}{{> weapon id=../id operator=../operator }}{{/weapons }}
+
+                <tr class="empty-table">
+                  <td colspan="6">
+                    <span class="aa-title" contenteditable="true">-</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            {{/if }}
+
+            {{#if (or operator (or abilities.length unique_actions.length) ) }}
+            <table class="aa-tables table">
+              <tr>
+                {{#if (or abilities.length operator)}}
+                <td class="p-0 aa-table-col">
+                  <table class="table table-tiny">
+                    <thead class="datacard-table-header uppercase font-heading">
+                      <tr>
+                        <th scope="col">Abilities</th>
+                      </tr>
+                    </thead>
+                    <tbody class="datacard-table-body font-body">
+                      {{#abilities }}{{> aa id=../id operator=../operator }}{{/abilities }}
+
+                      <tr class="empty-table">
+                        <td>
+                          <span class="aa-title" contenteditable="true">-</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                {{/if}}
+                {{#if (or unique_actions.length operator)}}
+                <td class="p-0 aa-table-col">
+                  <table class="table table-tiny">
+                    <thead class="datacard-table-header uppercase font-heading">
+                      <tr>
+                        <th scope="col">Unique&nbsp;Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="datacard-table-body font-body">
+                      {{#unique_actions }}{{> aa id=../id operator=../operator }}{{/unique_actions }}
+
+                      <tr class="empty-table">
+                        <td>
+                          <span class="aa-title" contenteditable="true">-</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                {{/if}}
+              </tr>
+            </table>
+            {{/if}}
+
+            <div class="row aa-list">
+              <div class="col">
+                {{#if abilities.length }}
+                <p class="rule">
+                  <span class="aa-title" contenteditable="true">Abilities: </span>
+                  <span class="aa-description" contenteditable="true">
+                    {{#abilities }}
+                    <span {{#if equipment }}class="equipment-{{ ../id }}"{{/if}}>
+                      {{ title }}{{#if (and ../operator cost)}}{{ cost }}{{/if}}{{#unless @last}}, {{/unless}}
+                    </span>
+                    {{/abilities }}
+                  </span>
+                </p>
+                {{/if}} 
+                {{#if unique_actions.length }}
+                <p class="rule">
+                  <span class="aa-title" contenteditable="true">Unique Actions: </span>
+                  <span class="aa-description" contenteditable="true">
+                    {{#unique_actions }}
+                    <span {{#if equipment }}class="equipment-{{ ../id }}"{{/if}}>
+                      {{ title }}{{#if (and ../operator cost)}}{{ cost }}{{/if}}{{#unless @last}}, {{/unless}}
+                    </span>
+                    {{/unique_actions }}
+                  </span>
+                </p>
+                {{/if}} 
+                {{#if equipments.length }}
+                <p class="rule equipment-{{ id }}">
+                  <span class="aa-title" contenteditable="true">Other equipments: </span>
+                  <span class="aa-description" contenteditable="true">
+                    {{#equipments }}
+                    <span> {{ title }}{{#if (and ../operator cost)}}{{ cost }}{{/if}}{{#unless @last}}, {{/unless}} </span>
+                    {{/equipments }}
+                  </span>
+                </p>
+                {{/if}}
+              </div>
+            </div>
+
+            {{#if (or equipments.length operator)}}
+            <div class="row rules">
+              <div class="col">{{#equipments }}{{> rule id=../id operator=../operator }}{{/equipments }}</div>
+            </div>
+            {{/if}}
+
+            {{#if (or rules.length operator)}}
+            <div class="row rules rules-{{ id }}">
+              <div class="col">{{#rules }}{{> rule id=../id operator=../operator }}{{/rules }}</div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+
+        {{#if operator}}
+        <div class="datacard-footer uppercase font-value">
+          <p>
+            <span class="text-orange" contenteditable="true">{{ primary_category }}</span
+            ><span contenteditable="true">{{ secondary_categories }}</span>
+          </p>
+        </div>
+        {{/if}}
+      </div>
+    </td>
+
+    {{#if operator}}
+    <td class="no-print settings">
+      <div class="photo-dropzone" data-id="photo-{{ id }}">
+        <p class="text-20 uppercase heading font-heading text-center" style="line-height: 200px">
+          Drop your model photo here
+        </p>
+      </div>
+
+      <p class="text-center">
+        <input type="file" id="photo-{{ id }}" data-id="photo-{{ id }}" name="photo" hidden />
+        <label for="photo-{{ id }}" class="text-16 uppercase heading font-heading text-center text-white button"
+          >or click here to choose file</label
+        >
+      </p>
+
+      {{#if equipment }}
+      <p class="toggle">
+        <input type="checkbox" id="toggle-equipment-{{ id }}" name="toggle-equipment" data-id="equipment-{{ id }}" />
+        <label for="toggle-equipment-{{ id }}" class="text-16 uppercase heading font-heading">Hide equipment</label>
+      </p>
+      {{/if}}
+
+      {{#if rules.length }}
+      <p class="toggle large-only">
+        <input type="checkbox" id="toggle-rules-{{ id }}" name="toggle-rules" data-id="rules-{{ id }}" />
+        <label for="toggle-rules-{{ id }}" class="text-16 uppercase heading font-heading">Hide rule descriptions</label>
+      </p>
+      {{/if}}
+
+      <p>👈 Click any text on the card to edit it.</p>
+
+      {{# if generator }}
+      <p class="generator text-center">
+        {{#if subfactions.[1]}}
+        <select name="subfaction" id="subfaction-{{ id }}">
+          {{#subfactions }}
+          <option>{{this}}</option>
+          {{/subfactions }}
+        </select>
+        {{/if}}
+        <button
+          id="name-{{ id }}"
+          data-id="name-{{ id }}"
+          data-original="{{ original }}"
+          data-faction="{{ faction }}"
+          class="randomname text-16 uppercase heading font-heading text-center text-white button"
+        >
+          Generate random name
+        </button>
+      </p>
+      {{/if}}
+    </td>
+    {{/if}}
+  </tr>
+</table>

@@ -1,0 +1,625 @@
+/*Fonts from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</a>*/
+
+@font-face {font-family: "MachineStd";
+  src: url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.eot"); /* IE9*/
+  src: url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/MachineStd/eb5ec7da0268c5875a4ba8d399635a7f.svg#MachineStd") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Conduit ITC W02 Bold";
+  src: url("../fonts/ConduitITC/e8d1660b0c3738e3d5138b97ff2b7a47.eot"); /* IE9*/
+  src: url("../fonts/ConduitITC/e8d1660b0c3738e3d5138b97ff2b7a47.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/ConduitITC/e8d1660b0c3738e3d5138b97ff2b7a47.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/ConduitITC/e8d1660b0c3738e3d5138b97ff2b7a47.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/ConduitITC/e8d1660b0c3738e3d5138b97ff2b7a47.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+/*Theme*/
+
+body {
+  -webkit-print-color-adjust: exact; /*chrome & webkit browsers*/
+  color-adjust: exact; /*firefox & IE */
+}
+.font-body {
+  font-family: sans-serif !important;
+  font-weight: normal;
+}
+.font-heading {
+  font-family: "MachineStd", Arial, sans-serif !important;
+  font-weight: normal;
+}
+.font-value {
+  font-family: "Conduit ITC W02 Bold", sans-serif !important;
+  font-weight: 600;
+}
+.text-12 {
+  font-size: 0.75rem;
+}
+.text-14 {
+  font-size: 0.875rem;
+}
+.text-16 {
+  font-size: 1rem;
+}
+.text-18 {
+  font-size: 1.125rem;
+}
+.text-20 {
+  font-size: 1.25rem;
+}
+.text-21 {
+  font-size: 1.3125rem;
+}
+.text-24 {
+  font-size: 1.5rem;
+}
+.text-30 {
+  font-size: 1.875rem;
+}
+.text-38 {
+  font-size: 2.3rem;
+}
+.text-45 {
+  font-size: 2.8125rem;
+}
+.text-55 {
+  font-size: 3.8125rem;
+}
+.heading {
+  line-height: 1;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.invisible {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.static {
+  position: static;
+}
+.sticky {
+  position: sticky;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic !important;
+}
+.bold {
+  font-weight: 700 !important;
+}
+.text-white {
+  color: rgba(255, 255, 255);
+}
+.text-orange {
+  color: rgba(224, 76, 14);
+}
+a.text-orange:hover {
+  color: rgba(255, 255, 255);
+}
+.bg-orange {
+  background-color: rgb(224, 76, 14);
+}
+
+/*Hero*/
+
+body {
+  min-width: 1000px;
+}
+
+.hero {
+  padding: 100px 100px 20px 100px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8631827731092436) 0%,
+      rgba(0, 0, 0, 0.38139005602240894) 100%
+    ),
+    url('https://datacard.app/share.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: 0px 0px;
+}
+
+#dropzone {
+  margin: 30px auto;
+  border: 5px dashed rgb(224, 76, 14);
+  border-radius: 30px;
+  width: 650px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  white-space: nowrap;
+}
+.photo-dropzone {
+  margin: 20px auto;
+  border: 5px dashed #000000;
+  border-radius: 30px;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+.buttons {
+  background-color: rgba(86, 89, 78);
+  height: 60px;
+  padding: 5px;
+  width: 100%;
+}
+.button {
+  background-color: rgb(224, 76, 14);
+  border: 0;
+  border-radius: 10px;
+  margin: 0 5px 0 5px;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+}
+.right {
+  float: right;
+}
+.button img {
+  height: 40px;
+}
+label {
+  cursor: pointer;
+}
+
+/*Datacard*/
+
+#datacards {
+  padding: 0 50px 0 20px;
+  background-color: rgb(255, 255, 255);
+}
+.card-large .datacard {
+  width: 1000px;
+  margin: 50px 50px 0 0;
+  overflow: hidden;
+}
+.card-small .datacard {
+  width: 500px;
+  margin: 50px 50px 0 0;
+  overflow: hidden;
+}
+.avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  display: inline-block;
+}
+
+.card-large .small-only {
+  display: none;
+}
+.card-small .large-only {
+  display: none;
+}
+
+.datacard-container {
+  border: 3px solid rgb(224, 76, 14);
+  background-color: rgb(224, 224, 224);
+}
+.card-large .datacard-container {
+  margin: 36px 30px 0 0;
+  height: 620px;
+}
+.card-small .datacard-container {
+  margin: 12px 20px 0 10px;
+  height: 620px;
+}
+
+/*Header*/
+
+.card-large .header-container {
+  margin: -25px 15px 0 15px;
+  height: 190px;
+}
+.card-small .header-container {
+  margin: 0px 0px;
+  height: 190px;
+}
+.rule-card .header-container {
+  height: 100px;
+  margin-bottom: 15px;
+}
+.header-left {
+  background-color: rgb(0, 0, 0);
+  background-image: url('../stripes.png');
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+.card-large .header-left {
+  height: 100%;
+  padding: 10px 115px 10px 20px;
+  width: 550px;
+  border: 3px solid rgb(224, 76, 14);
+}
+.card-small .header-left {
+  height: 100px;
+  padding: 3px 5px 5px 105px;
+  margin-left: 124px;
+  width: 340px;
+}
+.rule-card .header-left {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border-bottom: 3px solid rgb(224, 76, 14);
+}
+.card-title {
+  word-wrap: break-word;
+}
+.description {
+  color: #cacaca;
+}
+.card-large .card-title {
+  font-size: 2.3rem;
+}
+.card-small .card-title {
+  font-size: 1.8rem;
+  line-height: 1.9rem;
+}
+.wounds {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 5px;
+  padding-right: 50px;
+  width: 95%;
+}
+.wound-title {
+  vertical-align: top;
+  margin: 7px 5px 0 0;
+  display: inline-block;
+}
+.wound-tracker {
+  display: inline-block;
+}
+.wound-tracker div {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  margin: 4px 8px 0 0;
+}
+.wound-tracker div.injured {
+  background-color: rgb(200, 200, 200);
+}
+.card-small .wounds {
+  display: none;
+}
+
+.header-right-container {
+  transform: skewX(-30deg);
+}
+.card-large .header-right-container {
+  width: 265px;
+  margin-top: -188px;
+  margin-left: 610px;
+  height: 190px;
+}
+.card-small .header-right-container {
+  width: 315px;
+  margin-top: 0;
+  margin-left: 140px;
+  height: 95px;
+}
+
+.header-right-row {
+  height: 47px;
+  width: 100%;
+  border-bottom: 3px solid rgb(224, 76, 14);
+}
+.header-right-row-content {
+  transform: skewX(30deg);
+  padding-left: 10px;
+}
+.header-right-row-content div {
+  text-align: center;
+}
+.card-large .header-right-row-content div {
+  width: 80px;
+}
+.card-small .header-right-row-content div {
+  width: 50px;
+}
+.header-right-row-label {
+  display: inline-block;
+  font-size: 1.7rem;
+  margin-top: 8px;
+}
+.header-right-row-value {
+  display: inline-block; 
+  font-size: 1.6rem;
+  margin-top: 3px;
+}
+.header-right-row-value .symbol {
+  font-size: 1.5rem;
+  vertical-align: text-bottom;
+}
+.card-large .header-right-row-value:first-child {
+  width: 25px;
+}
+.card-small .header-right-row-value:first-child {
+  width: 25px;
+}
+
+/*Triangle photo*/
+
+.triangle-container {
+  width: 250px;
+  height: 221px;
+  border-top: 3px solid rgb(224, 76, 14);
+  overflow: hidden;
+  margin-top: -204px;
+}
+.card-large .triangle-container {
+  margin-left: 440px;
+}
+.card-small .triangle-container {
+  margin-left: -12px;
+}
+
+.triangle-inner {
+  position: relative;
+  overflow: hidden;
+  transform: rotate(45deg) skew(15deg, 15deg);
+  border-bottom: 3px solid rgb(224, 76, 14);
+  border-right: 3px solid rgb(224, 76, 14);
+  width: 240px;
+  height: 240px;
+  margin: -120px 0 0 5px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.triangle-photo {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 20%;
+  left: 20%;
+  /*background-image: url("...");*/
+  background-position: calc(1px + 50%) calc(1px + 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: skew(-15deg, -15deg) rotate(-45deg);
+  cursor: move;
+
+  filter: none;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+}
+
+/*Movement symbols*/
+
+.symbol {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-size: 20px;
+  margin-left: 2px;
+}
+.symbol-white {
+  color: #ffffff;
+}
+.symbol-blue {
+  color: rgb(3, 91, 159);
+}
+.symbol-red {
+  color: rgb(204, 20, 21);
+}
+
+/*Data table*/
+
+table, tr, th, td {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+.table-tiny .odd {
+    background-color: rgb(181, 181, 181);
+}
+.table-tiny .even {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.datacard-content {
+  padding: 0 15px;
+}
+
+.card-large .table-tiny {
+  margin-bottom: 8px !important;
+}
+.card-small .table-tiny {
+  margin-bottom: 10px !important;
+}
+
+.card-large .table-tiny th {
+  padding: 3px 10px 0px 10px !important;
+}
+.card-large .table-tiny td {
+  padding: 2px 5px 2px 5px !important;
+}
+.card-small .table-tiny th {
+  padding: 10px 10px 0px 10px !important;
+}
+.card-small .table-tiny td {
+  padding: 5px 5px 5px 5px !important;
+}
+
+.datacard-table-header {
+  background-color: rgb(140, 140, 140);
+}
+.datacard-table-body td {
+  vertical-align: middle;
+}
+
+.card-large .datacard-table-header {
+  font-size: 1.3rem;
+}
+.card-large .datacard-table-body {
+  font-size: 1.1rem;
+}
+.card-large .datacard-table-body td:first-child {
+  font-size: 1.0rem;
+}
+.card-large .weapon-text {
+  font-size: 1.0rem;
+}
+
+.card-small .datacard-table-header {
+  font-size: 1.5rem;
+}
+.card-small .datacard-table-body {
+  font-size: 1.1rem;
+}
+.card-small .datacard-table-body td:first-child {
+  font-size: 1.1rem;
+}
+.card-small .weapon-text {
+  font-size: 1.0rem;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: rgb(181, 181, 181);
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: transparent;
+}
+.rule {
+  margin: 0;
+}
+.equipment-list {
+  font-size: 1rem;
+}
+.card-large .aa-tables {
+  margin: 0;
+}
+.card-large .aa-table-col {
+  min-width: 200px;
+}
+.aa-table-col:nth-child(2) {
+  padding-left: 10px !important;
+}
+.card-large .empty-table {
+  dispslay: none;
+}
+.card-large .aa-list {
+  display: none;
+}
+.rule-card .aa-list {
+  display: none;
+}
+.card-large .rules, .card-large .equipment {
+  font-size: 0.875rem;  
+}
+.card-small .equipment {
+  font-size: 1rem;
+}
+.card-small .aa-list {
+  font-size: 1rem;
+}
+.card-small .aa-tables {
+  display: none;
+}
+.rule-card .aa-tables {
+  display: block;
+}
+.card-small .rules {
+  display: none;
+}
+.rule-card .rules {
+  display: block;
+}
+.aa-title {
+  font-weight: 700;
+}
+
+/*Datacard footer*/
+
+.datacard-footer {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(224, 76, 14);
+  padding: 0 10px;
+  position: relative;
+}
+.datacard-footer p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.card-large .datacard-footer {
+  margin: -20px 45px 0 15px;
+  height: 40px;
+  font-size: 1.0rem;
+}
+.card-small .datacard-footer {
+  margin: -45px 35px 0 25px;
+  height: 70px;
+  font-size: 1.0rem;
+  line-height: 1.3rem;
+}
+.card-large .datacard-footer p {
+  height: 35px;
+}
+.card-small .datacard-footer p {
+  height: 65px;
+}
+
+/*Form*/
+
+.settings {
+  text-align: left;
+}
+.toggle label {
+  vertical-align: bottom;
+  line-height: 50px;
+}
+.toggle input {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+.generator select {
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+
+/*Print*/
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}

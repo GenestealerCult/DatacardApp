@@ -1,4 +1,5 @@
 fix.sh
 copy.sh
-.DS_Store
-
+**/.DS_Store
+webpack/dist
+webpack/node_modules
