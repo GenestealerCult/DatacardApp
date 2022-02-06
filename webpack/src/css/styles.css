@@ -278,9 +278,21 @@ label {
   font-size: 1.8rem;
   line-height: 1.9rem;
 }
+.rank {
+  position: absolute;
+  right:117px;
+  width:8%;
+  top:16px
+}
+.specialism {
+  position: absolute;
+  right:117px;
+  width:8%;
+  top:54px
+}
 .wounds {
   position: absolute;
-  bottom: 0px;
+  bottom: 25px;
   margin-bottom: 5px;
   padding-right: 50px;
   width: 95%;
@@ -303,8 +315,28 @@ label {
 .wound-tracker div.injured {
   background-color: rgb(200, 200, 200);
 }
+
+.experience {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 5px;
+  padding-right: 50px;
+  width: 100%;
+}
+
 .card-small .wounds {
   display: none;
+}
+.card-small .experience {
+  display: none;
+}
+.card-small .rank {
+  top: 68px;
+  right: 10px;
+}
+.card-small .specialism {
+  top: 64px;
+  right: 38px;
 }
 
 .header-right-container {

@@ -8,10 +8,20 @@
             <div class="header-left">
               <h2 class="card-title uppercase heading font-heading" contenteditable="true">{{ title }}</h2>
               <p class="text-14 italic bold description" contenteditable="true">{{ description }}</p>
+              {{#if rank}}<img src="{{rank}}.png" class="rank"/>{{/if}}
+              {{#if specialism}}<img src="{{specialism}}.png" class="specialism"/>{{/if}}
 
               <div class="wounds">
                 <span class="text-20 uppercase heading font-heading wound-title">Wounds</span>
                 <div class="wound-tracker">{{#wounds }}<div class="{{#isInjured ../wounds.length @index}}{{/isInjured}}"></div>{{/wounds }}</div>
+              </div>              
+              <div class="experience">
+                <span class="text-20 uppercase heading font-heading wound-title">XP</span>
+                <div class="wound-tracker">
+                  Kills <div class=""></div>
+                  Objective <div class=""></div>
+                  TacOps <div class=""></div><div class=""></div><div class=""></div><div class=""></div><div class=""></div><div class=""></div>
+                </div>
               </div>
             </div>
 
@@ -187,28 +197,41 @@
               </div>
             </div>
 
+            {{#if (or battleHonours.length operator)}}
+            <div class="row rules">
+              <div class="col">{{#battleHonours }}{{> rule id=../id operator=../operator }}{{/battleHonours }}</div>
+            </div>
+            {{/if}}
+
+            {{#if (or battleScars.length operator)}}
+            <div class="row rules">
+              <div class="col">{{#battleScars }}{{> rule id=../id operator=../operator }}{{/battleScars }}</div>
+            </div>
+            {{/if}}
+
             {{#if (or equipments.length operator)}}
             <div class="row rules">
               <div class="col">{{#equipments }}{{> rule id=../id operator=../operator }}{{/equipments }}</div>
             </div>
             {{/if}}
-
+            
             {{#if (or rules.length operator)}}
             <div class="row rules rules-{{ id }}">
               <div class="col">{{#rules }}{{> rule id=../id operator=../operator }}{{/rules }}</div>
             </div>
             {{/if}}
+            
           </div>
         </div>
 
         {{#if operator}}
         <div class="datacard-footer uppercase font-value">
           <p>
-            <span class="text-orange" contenteditable="true">{{ primary_category }}</span
-            ><span contenteditable="true">{{ secondary_categories }}</span>
+            <span class="text-orange" contenteditable="true">{{ primary_category }}</span>
+            <span contenteditable="true">{{ secondary_categories }}</span>
           </p>
         </div>
-        {{/if}}
+        {{/if}}        
       </div>
     </td>
 

@@ -18,6 +18,8 @@ var TEXT_LARGE = '<i class="bi bi-arrows-angle-expand"></i> Switch to large form
 var TEXT_RULECARDS = '<i class="bi bi-list-check"></i> Switch to rulecards';
 var TEXT_DATACARDS = '<i class="bi bi-person-lines-fill"></i> Switch to datacards';
 
+const SPECIALISM = ["Combat", "Staunch", "Marksman", "Scout"];
+
 // Templates
 var datacardTemplate = require("./templates/datacard.handlebars");
 
@@ -30,8 +32,11 @@ const exampleCards = [
     generator: true,
     subfactions: ["All"],
     title: "Genestealer Leader (with gold medal and claws)",
+    description: 'Test, XP 40',
     faction: "Hive Fleet",
     original: "Genestealer Leader (with gold medal and claws)",
+    rank: 'grizzled',
+    specialism: 'combat',
     primary_category: "Hive Fleet",
     secondary_categories: ", Tyranid, Genestealer, more categories",
     photo: Leader,
@@ -94,6 +99,18 @@ const exampleCards = [
         description: "Equipment rule description here",
       },
     ],
+    battleHonours: [
+      {
+        title: "Battle Honour",
+        description: "Battle honour rule description here",
+      }
+    ],
+    battleScars: [
+      {
+        title: "Battle Scars",
+        description: "Battle scars rule description here",
+      }
+    ],
   },
   {
     id: "id-2",
@@ -116,7 +133,7 @@ const exampleCards = [
         description: "Equipment rule description here",
       },
     ],
-  },
+  },  
 ];
 
 // Site builders
@@ -415,7 +432,7 @@ function parseRoster(roster) {
     rulecard.title = title;
     rulecards[Helpers.getRestfulURL(title)] = rulecard;
   }
-
+  
   roster
     .children("roster")
     .children("forces")
@@ -432,12 +449,16 @@ function parseRoster(roster) {
 
           var abilities = {};
           var actions = {};
+          var battleHonours = {};
+          var battleScars = {};
           var equipments = {};
           var rules = {};
 
           var customName = $(this).attr("customName");
           var title = customName ? customName : $(this).attr("name");
           var description = customName ? $(this).attr("name") : "";
+          var rank;
+          var specialsm;
 
           const subfactions = Helpers.getSubfactions(faction);
 
@@ -449,6 +470,8 @@ function parseRoster(roster) {
             title: title,
             description: description,
             name: Helpers.removeParentheses($(this).attr("name")),
+            rank: rank,
+            specialsim: specialsm,
 
             faction: faction,
             generator: subfactions.length > 0,
@@ -460,6 +483,8 @@ function parseRoster(roster) {
             abilities: [],
             rules: [],
             equipments: [],
+            battleHonours: [],
+            battleScars: []
           };
 
           // Test if unit title or 2 first words is found from images
@@ -474,7 +499,7 @@ function parseRoster(roster) {
             .children('profile[typeName="Operative"]')
             .each(function () {
               isOperative = true;
-
+             
               // Test if operative name or 2 first words is found from images
               properties["photo"] = suggestPhoto(
                 $(this).attr("name"),
@@ -497,7 +522,34 @@ function parseRoster(roster) {
                       Array(parseInt($(this).text())).keys()
                     );
                   }
-                });
+                });                             
+            });
+          
+          $(this)
+            .children("selections")
+            .children("selection")
+            .each(function() {
+              var name = $(this).attr("name");
+
+              if(name == 'XP') {
+                let number = parseInt($(this).attr('number'));
+                properties["description"] += ', XP '+ number;                
+                if(number >= 51) {
+                  properties["rank"] = 'revered';  
+                } else if(number >= 31) {
+                  properties["rank"] = 'grizzled';  
+                } else if(number >= 16) {
+                  properties["rank"] = 'ace';  
+                } else if(number >= 6) {
+                  properties["rank"] = 'veteran';  
+                } else {
+                  console.log(number);
+                  properties["rank"] = 'adapt';  
+                }
+              }              
+              else if(SPECIALISM.includes(name)) {
+                properties["specialism"] = name.toLowerCase();
+              } 
             });
 
           $(this)
@@ -540,10 +592,52 @@ function parseRoster(roster) {
               abilities: [],
               rules: [],
               equipments: [],
+              battleHonours: [],
+              battleScars: []
             };
-
+            
             // Print cost only once
             var costPrinted = false;
+
+            // Battle Honours
+            $(self)
+              .children("profiles")
+              .children('profile[typeName="Battle Honours"]')
+              .each(function () {
+                var data = {
+                    title: $(this).attr("name"),                    
+                  };                  
+  
+                $(this)
+                  .children("characteristics")
+                  .children("characteristic")
+                  .each(function () {
+                    data["description"] = $(this).text();
+                    console.log(data['description']);
+                  });
+                battleHonours[data["title"]] = data;
+                rulecard["battleHonours"].push(data);
+              });
+              
+              // Battle Scars
+              $(self)
+                .children("profiles")
+                .children('profile[typeName="Battle Scars"]')
+                .each(function () {
+                  var data = {
+                      title: $(this).attr("name"),                    
+                    };                  
+
+                  $(this)
+                    .children("characteristics")
+                    .children("characteristic")
+                    .each(function () {
+                      data["description"] = $(this).text();
+                      console.log(data['description']);
+                    });
+                  battleScars[data["title"]] = data;
+                  rulecard["battleScars"].push(data);
+              });
 
             // Basic weapon profiles
             $(self)
@@ -654,7 +748,7 @@ function parseRoster(roster) {
                 rules[rs] = data;
                 rulecard["rules"].push(data);
               });
-
+           
             if (isEquipment) rulecards[Helpers.getRestfulURL(rulecard["title"])] = rulecard;
           };
 
@@ -687,6 +781,8 @@ function parseRoster(roster) {
               abilities: [abilities[i]],
               rules: [],
               equipments: [],
+              battleHonours: [],
+              battleScars: []
             });
           }
           for (var i in actions) {
@@ -699,10 +795,40 @@ function parseRoster(roster) {
               abilities: [],
               rules: [],
               equipments: [],
+              battleHonours: [],
+              battleScars: []
             });
           }
           for (var i in equipments) {
             properties["equipments"].push(equipments[i]);
+          }
+          for (var i in battleHonours) {
+            properties["battleHonours"].push(battleHonours[i]);
+
+            addRulecard(battleHonours[i].title, {
+              description: 'Battle Honours',
+              weapons: [],
+              unique_actions: [],
+              abilities: [],
+              rules: [],
+              equipments: [],
+              battleHonours: [battleHonours[i]],
+              battleScars: []
+            });
+          }
+          for (var i in battleScars) {
+            properties["battleScars"].push(battleScars[i]);
+
+            addRulecard(battleScars[i].title, {
+              description: 'Battle scars',
+              weapons: [],
+              unique_actions: [],
+              abilities: [],
+              rules: [rules[i]],
+              equipments: [],
+              battleHonours: [],
+              battleScars: [battleScars[i]]
+            });
           }
           for (var i in rules) {
             properties["rules"].push(rules[i]);
@@ -714,6 +840,8 @@ function parseRoster(roster) {
               abilities: [],
               rules: [rules[i]],
               equipments: [],
+              battleHonours: [],
+              battleScars: []
             });
           }
 
