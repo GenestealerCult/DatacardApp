@@ -543,7 +543,6 @@ function parseRoster(roster) {
                 } else if(number >= 6) {
                   properties["rank"] = 'veteran';  
                 } else {
-                  console.log(number);
                   properties["rank"] = 'adapt';  
                 }
               }              
