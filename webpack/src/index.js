@@ -101,8 +101,8 @@ const exampleCards = [
     ],
     battleHonours: [
       {
-        title: "Battle Honour",
-        description: "Battle honour rule description here",
+        title: "Battle Honours",
+        description: "Battle honours rule description here",
       }
     ],
     battleScars: [
@@ -458,7 +458,7 @@ function parseRoster(roster) {
           var title = customName ? customName : $(this).attr("name");
           var description = customName ? $(this).attr("name") : "";
           var rank;
-          var specialsm;
+          var specialism;
 
           const subfactions = Helpers.getSubfactions(faction);
 
@@ -471,7 +471,7 @@ function parseRoster(roster) {
             description: description,
             name: Helpers.removeParentheses($(this).attr("name")),
             rank: rank,
-            specialsim: specialsm,
+            specialism: specialism,
 
             faction: faction,
             generator: subfactions.length > 0,
