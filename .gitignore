@@ -3,3 +3,4 @@ copy.sh
 **/.DS_Store
 webpack/dist
 webpack/node_modules
+/.vscode

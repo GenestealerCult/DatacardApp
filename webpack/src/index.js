@@ -17,6 +17,8 @@ var TEXT_SMALL = '<i class="bi bi-arrows-angle-contract"></i> Switch to small fo
 var TEXT_LARGE = '<i class="bi bi-arrows-angle-expand"></i> Switch to large format';
 var TEXT_RULECARDS = '<i class="bi bi-list-check"></i> Switch to rulecards';
 var TEXT_DATACARDS = '<i class="bi bi-person-lines-fill"></i> Switch to datacards';
+var TEXT_RESTRICT = '<i class="bi bi-distribute-vertical"></i> Restrict card height';
+var INFO_RESTRICT = "Some data cards have large amounts of rules text. This toggle truncates the text on long cards";
 
 // Templates
 var datacardTemplate = require("./templates/datacard.handlebars");
@@ -244,7 +246,7 @@ function renderHero() {
 
   return element;
 }
-function button(id, text) {
+function button(id, text, info) {
   const element = document.createElement("div");
   element.classList.add(
     "text-18",
@@ -257,7 +259,7 @@ function button(id, text) {
   );
   element.innerHTML = text;
   element.id = id;
-
+  if (info) element.title = info;
   return element;
 }
 function renderButtons() {
@@ -267,6 +269,7 @@ function renderButtons() {
   element.classList.add("no-print");
 
   element.appendChild(button("toggle-datacards", TEXT_SMALL));
+  element.appendChild(button("toggle-cardheight", TEXT_RESTRICT, INFO_RESTRICT));
   element.appendChild(button("toggle-rulecards", TEXT_RULECARDS));
   element.appendChild(button("print-datacards", 'Print <i class="bi bi-printer"></i> cards'));
 
@@ -813,6 +816,10 @@ $("#toggle-datacards").on("click", function (event) {
   }
   large = !large;
 });
+
+$("#toggle-cardheight").on("click", function () {
+  document.body.classList.toggle("enforce-card-height");
+})
 
 // Activate card type toggle
 $("#toggle-rulecards").on("click", function (event) {
